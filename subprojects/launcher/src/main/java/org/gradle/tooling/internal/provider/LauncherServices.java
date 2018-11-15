@@ -17,6 +17,7 @@
 package org.gradle.tooling.internal.provider;
 
 import org.gradle.api.execution.internal.TaskInputsListener;
+import org.gradle.initialization.SubscribableBuildActionRunnerRegistration;
 import org.gradle.internal.classpath.CachedClasspathTransformer;
 import org.gradle.internal.concurrent.ExecutorFactory;
 import org.gradle.internal.concurrent.ParallelismConfigurationManager;

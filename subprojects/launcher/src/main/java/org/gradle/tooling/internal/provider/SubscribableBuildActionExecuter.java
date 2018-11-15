@@ -16,8 +16,10 @@
 
 package org.gradle.tooling.internal.provider;
 
+import org.gradle.initialization.BuildClientSubscriptions;
 import org.gradle.initialization.BuildEventConsumer;
 import org.gradle.initialization.BuildRequestContext;
+import org.gradle.initialization.SubscribableBuildActionRunnerRegistration;
 import org.gradle.internal.invocation.BuildAction;
 import org.gradle.internal.operations.BuildOperationListener;
 import org.gradle.internal.operations.BuildOperationListenerManager;

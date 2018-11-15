@@ -30,7 +30,7 @@ import org.gradle.internal.operations.OperationIdentifier;
 import org.gradle.internal.operations.OperationProgressEvent;
 import org.gradle.internal.operations.OperationStartEvent;
 import org.gradle.tooling.internal.protocol.events.InternalJvmTestDescriptor;
-import org.gradle.tooling.internal.provider.BuildClientSubscriptions;
+import org.gradle.initialization.BuildClientSubscriptions;
 import org.gradle.tooling.internal.provider.events.AbstractTestResult;
 import org.gradle.tooling.internal.provider.events.DefaultFailure;
 import org.gradle.tooling.internal.provider.events.DefaultTestDescriptor;

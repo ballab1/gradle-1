@@ -23,13 +23,21 @@ import org.gradle.internal.operations.OperationFinishEvent;
 import org.gradle.internal.operations.OperationIdentifier;
 import org.gradle.internal.operations.OperationProgressEvent;
 import org.gradle.internal.operations.OperationStartEvent;
-import org.gradle.tooling.internal.provider.BuildClientSubscriptions;
-import org.gradle.tooling.internal.provider.SubscribableBuildActionRunnerRegistration;
+import org.gradle.tooling.internal.protocol.OperationResultDecoratorFactory;
+import org.gradle.initialization.BuildClientSubscriptions;
+import org.gradle.initialization.SubscribableBuildActionRunnerRegistration;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ToolingApiSubscribableBuildActionRunnerRegistration implements SubscribableBuildActionRunnerRegistration {
+
+    private final OperationResultDecoratorFactory decoratorFactory;
+
+    ToolingApiSubscribableBuildActionRunnerRegistration(OperationResultDecoratorFactory decoratorFactory) {
+        this.decoratorFactory = decoratorFactory;
+    }
+
     @Override
     public Iterable<BuildOperationListener> createListeners(BuildClientSubscriptions clientSubscriptions, BuildEventConsumer consumer) {
         List<BuildOperationListener> listeners = new ArrayList<BuildOperationListener>();
@@ -41,7 +49,7 @@ public class ToolingApiSubscribableBuildActionRunnerRegistration implements Subs
             if (clientSubscriptions.isSendBuildProgressEvents()) {
                 buildListener = new TestIgnoringBuildOperationListener(new ClientForwardingBuildOperationListener(consumer));
             }
-            listeners.add(new ClientForwardingTaskOperationListener(consumer, clientSubscriptions, buildListener));
+            listeners.add(new ClientForwardingTaskOperationListener(consumer, clientSubscriptions, buildListener, decoratorFactory));
         }
         return listeners;
     }

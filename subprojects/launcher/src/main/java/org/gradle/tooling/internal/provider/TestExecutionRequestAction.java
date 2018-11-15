@@ -19,6 +19,7 @@ package org.gradle.tooling.internal.provider;
 import com.google.common.collect.ImmutableSet;
 import org.gradle.api.Transformer;
 import org.gradle.api.internal.StartParameterInternal;
+import org.gradle.initialization.BuildClientSubscriptions;
 import org.gradle.tooling.internal.protocol.events.InternalTestDescriptor;
 import org.gradle.tooling.internal.protocol.test.InternalJvmTestRequest;
 import org.gradle.tooling.internal.provider.test.ProviderInternalJvmTestRequest;

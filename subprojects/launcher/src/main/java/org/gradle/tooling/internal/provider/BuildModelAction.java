@@ -16,6 +16,7 @@
 package org.gradle.tooling.internal.provider;
 
 import org.gradle.api.internal.StartParameterInternal;
+import org.gradle.initialization.BuildClientSubscriptions;
 import org.gradle.tooling.internal.protocol.ModelIdentifier;
 
 public class BuildModelAction extends SubscribableBuildAction {

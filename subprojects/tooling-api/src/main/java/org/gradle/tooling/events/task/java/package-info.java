@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 the original author or authors.
+ * Copyright 2018 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +14,7 @@
  * limitations under the License.
  */
 
-package org.gradle.tooling.internal.provider;
-
-import org.gradle.initialization.BuildEventConsumer;
-import org.gradle.internal.operations.BuildOperationListener;
-
-public interface SubscribableBuildActionRunnerRegistration {
-    Iterable<BuildOperationListener> createListeners(BuildClientSubscriptions clientSubscriptions, BuildEventConsumer consumer);
-}
+/**
+ * Task execution result interfaces specific to Java projects.
+ */
+package org.gradle.tooling.events.task.java;

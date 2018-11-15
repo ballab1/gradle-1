@@ -16,6 +16,7 @@
 
 package org.gradle.tooling.internal.provider;
 
+import org.gradle.initialization.BuildClientSubscriptions;
 import org.gradle.internal.invocation.BuildAction;
 
 import java.io.Serializable;

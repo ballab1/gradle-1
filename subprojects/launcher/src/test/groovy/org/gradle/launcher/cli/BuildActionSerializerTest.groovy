@@ -20,7 +20,7 @@ import org.gradle.api.internal.StartParameterInternal
 import org.gradle.internal.serialize.SerializerSpec
 import org.gradle.launcher.cli.action.BuildActionSerializer
 import org.gradle.launcher.cli.action.ExecuteBuildAction
-import org.gradle.tooling.internal.provider.BuildClientSubscriptions
+import org.gradle.initialization.BuildClientSubscriptions
 import org.gradle.tooling.internal.provider.BuildModelAction
 import org.gradle.tooling.internal.provider.ClientProvidedBuildAction
 import org.gradle.tooling.internal.provider.TestExecutionRequestAction

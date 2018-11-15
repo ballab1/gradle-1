@@ -19,6 +19,7 @@ package org.gradle.tooling.internal.provider;
 import org.gradle.api.internal.StartParameterInternal;
 import org.gradle.api.logging.LogLevel;
 import org.gradle.initialization.BuildCancellationToken;
+import org.gradle.initialization.BuildClientSubscriptions;
 import org.gradle.initialization.BuildEventConsumer;
 import org.gradle.initialization.BuildLayoutParameters;
 import org.gradle.initialization.BuildRequestContext;

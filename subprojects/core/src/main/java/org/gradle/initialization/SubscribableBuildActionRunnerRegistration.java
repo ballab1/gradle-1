@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2018 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,16 +14,10 @@
  * limitations under the License.
  */
 
-package org.gradle.tooling.internal.protocol.events;
+package org.gradle.initialization;
 
-/**
- * DO NOT CHANGE THIS INTERFACE. It is part of the cross-version protocol.
- *
- * @since 2.5
- */
-public interface InternalTaskResult extends InternalOperationResult {
-    /**
-     * @since 5.1
-     */
-    String getOutcomeDescription();
+import org.gradle.internal.operations.BuildOperationListener;
+
+public interface SubscribableBuildActionRunnerRegistration {
+    Iterable<BuildOperationListener> createListeners(BuildClientSubscriptions clientSubscriptions, BuildEventConsumer consumer);
 }
