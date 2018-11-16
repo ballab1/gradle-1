@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 the original author or authors.
+ * Copyright 2018 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,18 +17,17 @@
 package org.gradle.tooling.internal.provider.events;
 
 import org.gradle.tooling.internal.protocol.events.InternalOperationFinishedProgressEvent;
-import org.gradle.tooling.internal.protocol.events.InternalTaskResult;
 
 public class DefaultTaskFinishedProgressEvent extends AbstractProgressEvent<DefaultTaskDescriptor> implements InternalOperationFinishedProgressEvent {
-    private final InternalTaskResult result;
+    private final AbstractTaskResult result;
 
-    public DefaultTaskFinishedProgressEvent(long eventTime, DefaultTaskDescriptor descriptor, InternalTaskResult result) {
+    public DefaultTaskFinishedProgressEvent(long eventTime, DefaultTaskDescriptor descriptor, AbstractTaskResult result) {
         super(eventTime, descriptor);
         this.result = result;
     }
 
     @Override
-    public InternalTaskResult getResult() {
+    public AbstractTaskResult getResult() {
         return result;
     }
 
